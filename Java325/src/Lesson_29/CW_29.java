@@ -6,7 +6,6 @@ package Lesson_29;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 //boxing и unboxing - самая ужасная вещь которая может быть, т.к. бьет по производительности
 public class CW_29 {
@@ -15,28 +14,28 @@ public class CW_29 {
 
 
     public static void main(String[] args) {
-        System.out.println("Sum : " + Math.sum(10, 20));
-
-        Math.print1(100);
-        //Math.print(100.4); -> уже будет ошибка. Нужен Generic
-
-
-        Math.print(100);
-        Math.print(100.4);
-
-        Math.sum1(1d, 1.2f);
-        System.out.println("Sum : " + Math.sum1(1d, 1.2f));
-
-        System.out.println();
-        MyArray<Double> arr = new MyArray<>();
-        arr.add(10.2);
-        arr.add(10.6);
-        arr.print();
-        System.out.println();
-        MyArray<Float> arrF = new MyArray<>();
-        arrF.add(12f);
-        arrF.add(15f);
-        arrF.print();
+//        System.out.println("Sum : " + Lesson_29.HW_29.Math.sum(10, 20));
+//
+//        Lesson_29.HW_29.Math.print1(100);
+//        //Math.print(100.4); -> уже будет ошибка. Нужен Generic
+//
+//
+//        Lesson_29.HW_29.Math.print(100);
+//        Lesson_29.HW_29.Math.print(100.4);
+//
+//        Lesson_29.HW_29.Math.sum1(1d, 1.2f);
+//        System.out.println("Sum : " + Lesson_29.HW_29.Math.sum1(1d, 1.2f));
+//
+//        System.out.println();
+//        Lesson_29.HW_29.MyArray<Double> arr = new Lesson_29.HW_29.MyArray<>();
+//        arr.add(10.2);
+//        arr.add(10.6);
+//        arr.print();
+//        System.out.println();
+//        Lesson_29.HW_29.MyArray<Float> arrF = new Lesson_29.HW_29.MyArray<>();
+//        arrF.add(12f);
+//        arrF.add(15f);
+//        arrF.print();
 
 
         //Неправильный пример использования Generic
