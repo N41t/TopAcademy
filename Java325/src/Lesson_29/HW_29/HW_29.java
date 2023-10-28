@@ -1,14 +1,15 @@
 package Lesson_29.HW_29;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HW_29 {
 
 
-    public static int sumAll(List<Integer> arr, MyFunctional predicate){
+    public static int sumAll(List<Integer> arr, MyFunctional predicate, MyFunctional predicate2){
         int sum = 0;
         for (int num:arr) {
-            if (predicate.test(num)) {
+            if (predicate.test(num) && predicate2.test(num)) {
                 sum+=num;
             }
         }
@@ -16,6 +17,14 @@ public class HW_29 {
     }
 
     public static void main(String[] args) {
+
+        List<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.add(4);
+        arr.add(5);
+
         Comparable comparable = new Comparable() {
             @Override
             public int compare(String a, String b) {
@@ -27,6 +36,10 @@ public class HW_29 {
 
         Comparable comparable2 = (n1,n2) -> n2.compareTo(n1);
         System.out.println(comparable2.compare("bba", "bab"));
+
+        //Predicate test
+        System.out.println("-----Predicate test-----");
+        System.out.println("Sum: " + sumAll(arr, n->n%2==0, n->n>2)); //сумма только четных и которые больше 2
     }
 }
 
