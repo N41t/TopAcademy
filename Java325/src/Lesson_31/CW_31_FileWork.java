@@ -63,8 +63,8 @@ public class CW_31_FileWork {
         Integer count = scanner.nextInt();
 
         for (int i = 0; i < count; i++) {
-            //addMethod(folderName+i, fileName+i);
-            deleteMethod(folderName+i, fileName+i);
+            addMethod(folderName+i, fileName+i);
+            deleteMethod(folderName+i, fileName + i + ".txt");
         }
 
 
